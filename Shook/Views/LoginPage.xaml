@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:shookApp="clr-namespace:ShookApp;assembly=ShookApp"
+             mc:Ignorable="d"
+             x:Class="ShookApp.Views.LoginPage"
+             BackgroundImageSource="background.png">
+    <!-- TODO: Change background image -->
+    <!-- TODO: Add i18n -->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="10, 45, 10, 40" />
+            <On Platform="Android" Value="10, 10, 10, 5" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <StackLayout Grid.Row="0"
+                         Grid.Column="0">
+                <!-- TODO: Insert logo image and remove label -->
+                <Label Text="LOGO"
+                       FontSize="96" 
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+            </StackLayout>
+            
+            <StackLayout Grid.Row="1"
+                         Grid.Column="0">
+                <Entry Style="{StaticResource LoginPageEntry}"
+                       Placeholder="Enter Username or Email"
+                       x:Name="usernameEntry"/>
+                <Entry Style="{StaticResource LoginPageEntry}"
+                       Placeholder="Enter Password"
+                       IsPassword="True" 
+                       Completed="Login_Clicked"
+                       x:Name="passwordEntry"/>
+            </StackLayout>
+            
+            <StackLayout Grid.Row="2"
+                         Grid.Column="0">
+                <Button Text="Login"
+                        Style="{StaticResource LoginPageButton}"
+                        Clicked="Login_Clicked" />
+                <Button Text="Register"
+                        Style="{StaticResource LoginPageButton}"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
