@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B0C1989E-8F9E-4511-B043-19978A4A4F3D}</ProjectGuid>
+    <ProjectGuid>{1A8FC969-2138-4396-B307-94181C5B0736}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Shook.Droid</RootNamespace>
-    <AssemblyName>Shook.Android</AssemblyName>
+    <RootNamespace>ShookMobile.Droid</RootNamespace>
+    <AssemblyName>ShookMobile.Android</AssemblyName>
     <Deterministic>True</Deterministic>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
@@ -53,7 +53,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
   <ItemGroup>
@@ -88,9 +88,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Shook\Shook.csproj">
-      <Project>{38ED05CC-F21B-4F2A-A04C-BB3E3B267E5E}</Project>
-      <Name>Shook</Name>
+    <ProjectReference Include="..\ShookMobile\ShookMobile.csproj">
+      <Project>{BC5E8402-F03D-4AD0-819F-E1080764D7FC}</Project>
+      <Name>ShookMobile</Name>
     </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

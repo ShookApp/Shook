@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Shook.iOS
+namespace ShookMobile.iOS
 {
     public class Application
     {
